@@ -1,0 +1,7 @@
+Shaders:
+
+For 'Stencil Window'
+https://github.com/noisecrime/Unity-StencilPortalRoomCube
+
+For the stenciled objects
+http://www.shaderslab.com/demo-09---stencil-effect-invisible-crate.html
