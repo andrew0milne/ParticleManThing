@@ -19,6 +19,7 @@ public class BridgeSegment : MonoBehaviour
 		player_location = GameObject.FindGameObjectWithTag ("Player").transform;
 		startPos = new Vector3 (this.transform.position.x, this.transform.position.y - 1.0f, this.transform.position.z);
 		endPos = this.transform.position;
+
 	}
 
 	float GetDistance()
@@ -30,8 +31,7 @@ public class BridgeSegment : MonoBehaviour
 		//dist /= range;
 
 		//dist = dist * dist;
-
-		//Debug.Log (dist);
+	
 
 		return dist;
 	}

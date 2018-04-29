@@ -20,14 +20,12 @@ public class BridgeBuilder : MonoBehaviour
 	{
 		bridge = new GameObject[bridge_size [0], bridge_size [1]];
 
-		Debug.Log (bridge.Length);
-
 		for (int i = 0; i < bridge_size [0]; i++) 
 		{
 			for (int j = 0; j < bridge_size [1]; j++) 
 			{
-				Vector3 segment_pos = new Vector3 (parent.transform.position.x - j, parent.transform.position.y, parent.transform.position.z + i);
-				bridge [i, j] = Instantiate (bridge_segment, segment_pos, Quaternion.identity, parent.gameObject.transform);
+				Vector3 segment_pos = new Vector3 (-j, 0.0f, i);
+				bridge [i, j] = Instantiate (bridge_segment, segment_pos, Quaternion.identity, gameObject.transform);
 				bridge[i,j].GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.black);
 			}
 		}

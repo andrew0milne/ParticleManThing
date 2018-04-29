@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CielaSpike;
 
 public class GroundWave : MonoBehaviour 
 {
@@ -99,22 +98,17 @@ public class GroundWave : MonoBehaviour
 		x_location = xLoc / scale;
 		y_location = yLoc / scale;
 
-		this.StartCoroutineAsync (Move ());
+		this.StartCoroutine (Move ());
 	}
 
 	IEnumerator Move()
 	{
 		while (going) 
 		{
-			
-
 			num = Mathf.PerlinNoise (x_location + time, y_location + time);
 			num += Mathf.PerlinNoise (x_location - (time + 0.2f), y_location - (time + 0.2f));
 
 			num /= 2.0f;
-
-
-
 
 			perlin_location = endPos;
 
@@ -125,27 +119,13 @@ public class GroundWave : MonoBehaviour
 
 			this_position.y = controller_location.y;
 
-
-			yield return Ninja.JumpToUnity;
-
 			Vector3 p_pos = player_location.position;
 
-			yield return Ninja.JumpBack;
-
 			distance = Vector3.Distance (p_pos, this_position);
-
-
-			yield return Ninja.JumpToUnity;
-
 
 			final_emission = Color.Lerp (startColor, endColor, num);
 
 			final_emission = Color.Lerp (player_color, final_emission, (distance - min) / max);
-
-			//band = 1.0f - audio_effect.average_band_buffer/ 2.0f;
-
-			//final_emission = Color.Lerp(Color.red, final_emission, band);
-
 
 			this.transform.localPosition = perlin_location;
 			this.transform.localPosition = Vector3.Slerp (player_pos, transform.position, ((distance - min) / max) - 0.1f);
@@ -155,7 +135,7 @@ public class GroundWave : MonoBehaviour
 
 
 			time += Time.deltaTime;
-			yield return Ninja.JumpBack;
+
 		}
 
 		yield return null;

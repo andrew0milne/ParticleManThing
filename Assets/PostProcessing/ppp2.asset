@@ -50,7 +50,7 @@ MonoBehaviour:
       ambientOnly: 0
       highPrecision: 0
   screenSpaceReflection:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       reflection:
         blendType: 1
@@ -100,10 +100,10 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 1
-        threshold: 1.1
-        softKnee: 1
-        radius: 2.42
+        intensity: 0.34
+        threshold: 0.62
+        softKnee: 0
+        radius: 4.12
         antiFlicker: 1
       lensDirt:
         texture: {fileID: 2800000, guid: 69e847bbff1cf5449a4ee0bbd045dbc9, type: 3}
@@ -125,7 +125,7 @@ MonoBehaviour:
         tint: 0
         hueShift: 0
         saturation: 1.1703162
-        contrast: 1.38
+        contrast: 1.23
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
@@ -293,7 +293,7 @@ MonoBehaviour:
       size: 1
       luminanceContribution: 0.8
   vignette:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
