@@ -42,8 +42,6 @@ public class DynamicEnviromentCubes : MonoBehaviour
 
 		float rand = Random.Range (0.2f, 1.0f);
 
-		min_color = new Color (rand, 0.0f, 0.0f);
-
 
 		min_color = new Color (2.0f, 0.5f, 0.5f);
 
@@ -103,7 +101,8 @@ public class DynamicEnviromentCubes : MonoBehaviour
 	void Update () 
 	{
 		amount = scale + audio_effect.audio_band_buffer [channel]/5.0f;
-		cc = 1.0f - audio_effect.audio_band_buffer [channel]/2.0f;
+		//amount = scale + audio_effect.audio_band [channel]/5.0f;
+		cc = (1.0f - audio_effect.audio_band_buffer [channel]/2.0f);
 		//Debug.Log (cc);
 
 		if (!onPerson) 

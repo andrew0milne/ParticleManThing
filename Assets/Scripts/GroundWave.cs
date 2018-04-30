@@ -136,6 +136,7 @@ public class GroundWave : MonoBehaviour
 
 			time += Time.deltaTime;
 
+			yield return null;
 		}
 
 		yield return null;

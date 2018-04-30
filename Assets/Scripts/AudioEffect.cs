@@ -68,7 +68,7 @@ public class AudioEffect : MonoBehaviour
 
 	void GetSpectrumData()
 	{
-		thisAudioSource.GetSpectrumData (samples, 0, FFTWindow.Blackman);
+		thisAudioSource.GetSpectrumData (samples, 0, FFTWindow.Triangle);
 	}
 
 	void MakeFreqBands()

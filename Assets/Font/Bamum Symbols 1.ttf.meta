@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: a3aed71b3af22cf4ba752dd7a0443067
+timeCreated: 1519914694
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Bamum Symbols 1
+  fontNames:
+  - Bamum Symbols 1
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
